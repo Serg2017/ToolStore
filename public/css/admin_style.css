@@ -1,0 +1,391 @@
+/*********************************************************************/
+/************************ NORMALIZATION CSS **************************/
+/*********************************************************************/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/*********************************************************************/
+/************************ Главные стили ******************************/
+/*********************************************************************/
+img {
+    max-width: 100%;
+}
+
+/*END NORMALISATION*/
+
+body {
+    min-width: 1024px;
+}
+
+.g-data-add {
+    display: inline-block;
+    margin: 5px 0;
+    font-size: 1.2em;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    background: grey;
+    padding: 5px;
+}
+
+.g-padding-medium {
+    padding: 10px;
+}
+
+.g-margin-medium {
+    display: inline-block;
+    margin: 10px;
+}
+
+.g-edit-ico {
+    display: block;
+    background: url(../images/admin/ico_edit.png) center center/30px no-repeat;
+    width: 30px;
+    height: 30px;
+}
+
+.g-delete-ico {
+    display: block;
+    background: url(../images/admin/ico_delete.png) center center/30px no-repeat;
+    width: 30px;
+    height: 30px;
+}
+
+/*Шапка*/
+.header {
+    background: -moz-linear-gradient(bottom, rgb(0, 0, 0), rgb(100, 100, 100));
+}
+
+.header__logo {
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    margin: 10px;
+}
+
+/*Навигация в шапке*/
+.header__nav {
+    border-top: 5px solid rgba(35, 150, 33, .5);
+    background-color: rgb(242, 242, 242);
+    position: relative;
+
+    -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
+    -moz-box-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
+}
+
+.nav {
+    margin: 0;
+    padding: 0;
+}
+
+.nav__item {
+    list-style-type: none;
+    display: inline-block;
+}
+
+.nav__link {
+    display: block;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    padding: 5px 10px;
+    border-right: 2px solid rgb(216, 216, 216);
+}
+
+/*Дополнительная навигация*/
+.additional-nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/*Блок контента*/
+.content {
+    border-left: 3px solid rgba(21, 100, 139, .5);
+    border-right: 3px solid rgba(21, 100, 139, .5);
+    border-bottom: 3px solid rgba(21, 100, 139, .5);
+    padding: 15px;
+    background-color: rgb(245, 250, 245);
+}
+
+.content__wrapper {
+    background-color: rgb(230, 230, 230);
+}
+
+
+/*Дополнительная блочная навигация*/
+.setting-nav {
+    padding: 0;
+    margin: 0;
+}
+
+.setting-nav__item {
+    position: relative;
+    list-style-type: none;
+    display: inline-block;
+    //border: 1px solid red;
+    margin: 10px;
+}
+
+.setting-nav__link {
+    display: block;
+    text-decoration: none;
+    border: 1px solid grey;
+    text-align: center;
+    width: 150px;
+
+    padding: 70px 0;
+    background: url(../images/admin/bg_t.png) left top/140px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    z-index: 10;
+    -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
+    -moz-box-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
+}
+
+
+.hidden-menu {
+    position: absolute;
+    top: 0;
+    display: none;
+    z-index: 1;
+    background-color: #ffe9d8;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(21, 100, 139, .5);
+}
+
+.hidden-menu__item,
+.hidden-menu__title {
+    list-style-type: none;
+}
+.hidden-menu__title {
+    display: block;
+    background: -moz-linear-gradient(bottom, rgb(0, 0, 0), rgb(100, 100, 100));
+    padding: 5px;
+    color: rgb(255, 255, 255);
+}
+
+.hidden-menu__link {
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    margin: 10px;
+}
+
+
+.setting-nav__item:hover .hidden-menu{
+    display: block;
+}
+
+
+/*Подвал*/
+.footer {
+    background-color: rgb(70, 70, 70);
+}
+.footer__text {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+}
+
+
+/*Хлебные крошки*/
+.bread-crumbs {
+    display: block;
+    padding: 0;
+    margin: 0;
+    background-color: rgb(100, 100, 100);
+}
+
+.bread-crumbs__item {
+    list-style-type: none;
+    display: inline-block;
+}
+
+.bread-crumbs__link {
+    display: block;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.bread-crumbs__link::after {
+    content: ">>";
+}
+
+
+/*********************************************************************/
+/************************ Табицы с информацией ***********************/
+/*********************************************************************/
+
+.table-info__header {
+    font-weight: bold;
+}
+
+.table-info__td {
+    padding: 5px 10px;
+    border: 1px solid black;
+    background-color: rgb(255, 255, 255);
+}
+
+.table-info__tr:hover {
+    background-color: rgb(210, 210, 210);
+}
+
+
+/*********************************************************************/
+/************************ Формы **************************************/
+/*********************************************************************/
+.form__label {
+    display: block;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+}
+
+.form__input,
+.form__select,
+.form__textarea,
+.form__file{
+    width: 350px;
+    padding: 5px;
+    border: none;
+}
+
+.form__select {
+    width: 360px;
+}
+
+.form__submit {
+    padding: 10px;
+    border: none;
+    background: -moz-linear-gradient(bottom, rgb(0, 0, 0), rgb(100, 100, 100));
+    color: white;
+    box-shadow: 2px 1px 1px rgba(0, 0, 0, .8);
+}
+
+.form__submit:hover {
+    cursor: pointer;
+    box-shadow: none;
+}
+
+
+
+/*********************************************************************/
+/************************ Ошибки и сообшения *************************/
+/*********************************************************************/
+.errors {
+    margin: 0;
+    padding: 0;
+}
+.errors__header {
+    font-weight: bold;
+}
+.errors__header,
+.errors__item {
+    display: block;
+    padding: 5px 10px;
+    color: rgb(255, 0, 0);
+}
+
+
+.g-info-text {
+    padding: 10px;
+    font-weight: bold;
+    color:  rgb(242, 94, 80);
+}
+
+
+/*********************************************************************/
+/************************ Заказы *************************************/
+/*********************************************************************/
+.order_new,
+.order_treatment,
+.order_delivered,
+.order_fulfilled {
+    margin: 10px 0 0 10px;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+}
+
+.order_new {
+    background-color: #54803f;
+}
+
+.order_treatment {
+    background-color: red;
+}
+
+.order_delivered {
+    background-color: blue;
+}
+.order_fulfilled {
+    background-color: grey;
+}
+
+.order_explanation {
+    display: inline-block;
+    padding-left: 10px;
+}
+
+
+
+
+/*********************************************************************/
+/************************ Очистка ************************************/
+/*********************************************************************/
+.content:after {
+    content: "."; /*не пустой для Opera это важно :)*/
+    display: block;
+    clear: both; /*очищаем обтекаемость*/
+    visibility: hidden; /*не отображаем*/
+    line-height: 0; /*высоту блока и строки сводим на ноль, чтобы не было видно этого блока*/
+    height: 0;
+}
+
+

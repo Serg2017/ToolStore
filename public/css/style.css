@@ -1,0 +1,548 @@
+/*********************************************************************/
+/************************ NORMALIZATION CSS **************************/
+/*********************************************************************/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+/*END NORMALISATION*/
+
+.wrapper {
+    width: 960px;
+    margin: 0 auto;
+    //border: 1px solid black;
+}
+
+.g-text {
+    padding: 10px;
+}
+/*********************************************************************/
+/************************ Главные стили ******************************/
+/*********************************************************************/
+
+/*Шапка*/
+.header {
+    background-color: rgb(235, 235, 235);
+    /*height: 150px;*/
+    border-bottom: 1px solid black;
+    margin-bottom: 15px;
+}
+
+
+/*Блоки входа и регистрации*/
+.header__enter {
+    background: rgb(83, 79, 78);
+    text-align: right;
+    padding: .2em 0;
+    -webkit-box-shadow: 1px 1px 2px rgba(0 , 0, 0, .5);
+    -moz-box-shadow: 1px 1px 2px rgba(0 , 0, 0, .5);
+    box-shadow: 1px 1px 2px rgba(0 , 0, 0, .5);
+}
+
+.title-enter,
+.title-registration {
+    text-decoration: none;
+   /* padding-right: .6em;*/
+}
+.title-enter {
+    color: rgb(242, 94, 80);
+}
+
+.title-all {
+    color: rgb(255, 255, 255);
+}
+.title-registration {
+    color:rgb(254, 188, 4);
+}
+
+.header__wrapper {
+    position: relative;
+}
+
+/*Логотип*/
+.logo {
+    padding: 2em .6em;//
+}
+
+.logo__t,
+.logo__s {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+.logo__t {
+    color: rgb(83, 79, 78);
+}
+
+
+.logo__s {
+    color: rgb(242, 94, 80);
+}
+
+/*Корзина*/
+.header__cart {
+    width: 280px;
+    background: -moz-linear-gradient(top, rgb(255, 255, 255), rgb(235, 235, 235));
+    color: rgb(242, 94, 80);
+    text-decoration: none;
+    display: inline-block;
+    padding: .6em;
+    position: absolute;
+    right: 0;
+    top: .6em;
+    -webkit-transition: box-shadow .4s;
+    -moz-transition: box-shadow .4s;
+    -ms-transition: box-shadow .4s;
+    -o-transition: box-shadow .4s;
+    transition: box-shadow .4s;
+}
+
+.header__cart:hover {
+    -webkit-box-shadow: 1px 1px 2px rgba(0 , 0, 0, .5);
+    -moz-box-shadow: 1px 1px 2px rgba(0 , 0, 0, .5);
+    box-shadow: 1px 1px 2px rgba(0 , 0, 0, .5);
+}
+
+
+/*Меню в шапке*/
+.header__nav {
+    background-color: rgb(83, 79, 78);
+    width: 100%;
+}
+
+.nav {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+.nav__item {
+    list-style-type: none;
+    display: inline-block;
+}
+
+.nav__link {
+    display: block;
+    margin: .6em;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+
+    -webkit-transition: color 1s;
+    -moz-transition: color 1s;
+    -ms-transition: color 1s;
+    -o-transition: color 1s;
+    transition: color 1s;
+}
+
+.nav__link::after {
+    content:"|";
+    padding-left: .4em;
+}
+
+.nav__link:hover {
+    color: rgb(242, 94, 80);
+}
+
+/*Поиск*/
+.header__search {
+    width: 280px;
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: rgb(242, 94, 80);
+    padding: 1em .6em;
+    -webkit-box-shadow: -1px -1px 2px rgba(0 , 0, 0, .5);
+    -moz-box-shadow: -1px -1px 2px rgba(0 , 0, 0, .5);
+    box-shadow: -1px -1px 2px rgba(0 , 0, 0, .5);
+}
+
+.search__input {
+    border: none;
+    height: 1.5em;
+    width: 235px;
+    padding-left: .6em;
+}
+
+/*Блок меню*/
+.sidebar {
+    border: 1px solid rgb(172, 172, 172);
+    width: 200px;
+    float:left;
+    -webkit-box-shadow: 1px 1px 2px rgba(0 , 0, 0, .5);
+    -moz-box-shadow: 1px 1px 2px rgba(0 , 0, 0, .5);
+    box-shadow: 1px 1px 2px rgba(0 , 0, 0, .5);
+}
+
+/*Блок Контента*/
+.content {
+    margin-left: 215px;
+    border: 1px solid rgb(172, 172, 172);
+}
+
+.content__header {
+    display: block;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+/*Подвал*/
+.footer {
+    background: rgb(172, 172, 172);
+    margin-top: 15px;
+}
+
+.footer__content {
+    display: block;
+    padding: 10px;
+    text-align: center;
+}
+
+/*Главное меню*/
+.main-nav {
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav__title {
+    display: block;
+    background-color: rgb(242, 94, 80);
+    padding: .6em;
+    color: rgb(255, 255, 255);
+}
+
+.main-nav__item {
+    list-style-type: none;
+}
+
+.main-nav__link {
+    display: block;
+    padding: .3em .6em;
+    text-decoration: none;
+    border-bottom: 1px solid rgb(172, 172, 172);
+    color: rgb(83, 79, 78);
+}
+
+.main-nav__link:hover {
+    background: url(../images/main/check-ico.png) 180px center/15px no-repeat;
+}
+
+
+/*Товары*/
+.product {
+    width: 223px;
+    min-height: 250px;
+    border: 1px solid rgb(240, 240, 240);
+    display: inline-block;
+    margin: .6em;
+}
+
+.product__img{
+    overflow: hidden;
+    height: 180px;
+    padding: 10px;
+}
+
+.product:hover {
+    -webkit-box-shadow: 1px 1px 2px rgba(0 , 0, 0, .5), -1px -1px 2px rgba(0 , 0, 0, .5);
+    -moz-box-shadow: 1px 1px 2px rgba(0 , 0, 0, .5), -1px -1px 2px rgba(0 , 0, 0, .5);
+    box-shadow: 1px 1px 2px rgba(0 , 0, 0, .5), -1px -1px 2px rgba(0 , 0, 0, .5);
+}
+
+.product__description {
+    padding: .3em .6em;
+    height: 1em;
+    overflow: hidden;
+}
+
+.product__price {
+    border-top: 1px solid rgb(240, 240, 240);
+    padding: .3em .6em;
+}
+
+.product__cart {
+    display: block;
+    background-color: rgb(242, 94, 80);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    text-align: center;
+    padding: .3em;
+}
+
+
+
+/*********************************************************************/
+/************************ Подробный просмотр товара ******************/
+/*********************************************************************/
+.product-view {
+    /*border: 1px solid red;*/
+    margin: 10px;
+}
+
+.product-view__img {
+    width: 350px;
+    float: left;
+    border: 1px solid rgb(240, 240, 240);
+}
+
+.product-view__content {
+    margin-left: 350px;
+    /*border: 1px solid black;*/
+}
+
+.product-view__title,
+.product-view__brand,
+.product-view__status,
+.product-view__price,
+.product-view__cart {
+    display: block;
+    margin: 0 10px 10px 10px;
+}
+
+.product-view__title {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.product-view__title-d {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.product-view__text {
+    text-align: justify;
+}
+
+
+/*********************************************************************/
+/************************ Корзина ************************************/
+/*********************************************************************/
+.cart {
+    width: 97%;
+    margin: 10px;
+}
+
+.cart-header {
+    display: block;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.cart__title {
+    font-weight: bold;
+}
+
+.cart__td {
+    border: 3px double rgb(240, 240, 240);
+    padding: 10px;
+}
+
+.incorrect_tr {
+    background-color: rgba(255, 0, 0, .2);
+}
+
+.button-order {
+    display: inline-block;
+    background-color: rgb(83, 79, 78);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    text-align: center;
+    padding: .3em;
+    margin: 10px;
+}
+
+
+/*********************************************************************/
+/************************ Формы **************************************/
+/*********************************************************************/
+.form {
+
+}
+
+.form__title {
+    display: block;
+    margin: 10px;
+    font-weight: bold;
+}
+
+.form__label {
+    display: block;
+    margin: 10px;
+}
+
+.form__input,
+.form__textarea {
+    display: block;
+    width: 400px;
+}
+
+.form__textarea {
+    width: 410px;
+    height: 100px;
+}
+
+.form__submit {
+    display: block;
+    margin: 10px;
+    border: none;
+    padding: 10px;
+}
+.form__submit:hover {
+    cursor: pointer;
+}
+
+/*********************************************************************/
+/************************ Ошибки и сообшения *************************/
+/*********************************************************************/
+.errors {
+    margin: 0;
+    padding: 0;
+}
+.errors__header {
+    font-weight: bold;
+}
+.errors__header,
+.errors__item {
+    display: block;
+    padding: 5px 10px;
+    color: rgb(255, 0, 0);
+}
+
+
+.g-info-text {
+    padding: 10px;
+    font-weight: bold;
+    color:  rgb(242, 94, 80);
+}
+
+
+
+/*********************************************************************/
+/************************ Форма входа и регистрации ******************/
+/*********************************************************************/
+.mask {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.mask__close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    display: block;
+    height: 30px;
+    width: 30px;
+    background: url(../images/main/ico-close.png) center center/20px no-repeat;
+
+    -webkit-transition: transform .5s;
+    -moz-transition: transform .5s;
+    -ms-transition: transform .5s;
+    -o-transition: transform .5s;
+    transition: transform .5s;
+}
+
+.mask__close:hover{
+    cursor: pointer;
+    transform: rotate(360deg);
+}
+
+.auth,
+.registration {
+    width: 435px;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 7px 7px 8px rgba(0, 0, 0, .7);
+}
+
+
+.mask {
+    display: none;
+}
+
+.registration {
+    height: 305px;
+}
+
+
+
+
+/*********************************************************************/
+/************************ Кабинет ************************************/
+/*********************************************************************/
+.cabinet-content {
+    margin: 0;
+}
+
+
+
+
+/*CLEAR*/
+.product-view__content:after {
+    content: "."; /*не пустой для Opera это важно :)*/
+    display: block;
+    clear: both; /*очищаем обтекаемость*/
+    visibility: hidden; /*не отображаем*/
+    line-height: 0; /*высоту блока и строки сводим на ноль, чтобы не было видно этого блока*/
+    height: 0;
+}
+
+
+
+
+
